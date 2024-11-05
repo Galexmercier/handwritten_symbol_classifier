@@ -29,6 +29,7 @@ class NoiseReduction(object):
 transform = transforms.Compose([
     transforms.ToTensor(),
 
+    # HINT: transforms.Compose() takes a list of functions within transforms
     ########## WRITE YOUR CODE BELOW ##########
     # TODO: find a way to normalize the data using PyTorch
     
