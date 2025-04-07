@@ -26,11 +26,11 @@ jobs:
         run: |
           cd exercise_answers
           python answers_2.py
-          cd ../web
+          cd ../docs
           python export_model.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web
+          publish_dir: ./docs
