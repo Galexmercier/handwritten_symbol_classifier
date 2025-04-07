@@ -98,6 +98,11 @@ def validate(model, test_loader, criterion):
 # Train the model
 train(model, train_loader, criterion, optimizer, epochs=5)
 
+# Save the trained model
+model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model.pth')
+torch.save(model.state_dict(), model_path)
+print(f"Model saved to {model_path}")
+
 def test(model, test_loader):
     model.eval()
     correct = 0
